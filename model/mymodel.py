@@ -145,13 +145,12 @@ class myModel(pl.LightningModule):
         # scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(optimizer,mode='min',patience=500,factor=0.8,verbose=True)
         scheduler = torch.optim.lr_scheduler.CosineAnnealingWarmRestarts(optimizer, T_0=500, T_mult=2, eta_min=0,
                                                                          verbose=False)
-
         lr_scheduler = {
             'scheduler': scheduler,
             'interval': 'step',
             'frequency': 1,
             'name': "lr_scheduler",
-            'monitor': 'train_loss_full',  # 监听数据变化
+            'monitor': 'val_loss',  # 监听数据变化
             'strict': True,
         }
         #         return [optimizer], [lr_scheduler]
