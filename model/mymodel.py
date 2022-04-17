@@ -22,11 +22,12 @@ class myModel(pl.LightningModule):
 
     def __init__(
             self, learning_rate=3e-4, T_max=5,
-            hidden_size=256,
-            optimizer_name="AdamW", dropout=0.2,
+            optimizer_name="AdamW",
             pretrained="uer/chinese_roberta_L-2_H-128",
-            labels=50,
-            batch_size=2, trainfile="./data/train.pkt", valfile="./data/val.pkt", testfile="./data/test.pkt", **kwargs):
+            batch_size=2,
+            trainfile="./data/train.pkt",
+            valfile="./data/val.pkt",
+            testfile="./data/test.pkt", **kwargs):
         super().__init__()
         self.save_hyperparameters()
         print(self.hparams)
