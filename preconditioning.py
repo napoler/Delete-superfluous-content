@@ -47,11 +47,6 @@ if len(sys.argv) > 1:
 else:
     dataFile = input("数据集地址：")
 
-
-
-
-
-
 with open(dataFile,'r') as f:
     for i,it in enumerate(f):
         # print(it)

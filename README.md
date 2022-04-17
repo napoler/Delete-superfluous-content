@@ -9,6 +9,10 @@ https://www.kdocs.cn/view/l/clMszgx6DfBU?from=docs
 - 随机替换第三个句子，替换的为1，未替换的为0
 - 是用cls判别模型训练二分类模型
 
+
+## 依赖
+
+> pip install -U jsonargparse[signatures] transformers torchmetrics pytorch-lightning
 ## 预处理数据
 > python preconditioning.py
 > 
