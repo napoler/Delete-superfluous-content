@@ -8,3 +8,12 @@ https://www.kdocs.cn/view/l/clMszgx6DfBU?from=docs
 - 五个一组组成数据
 - 随机替换第三个句子，替换的为1，未替换的为0
 - 是用cls判别模型训练二分类模型
+
+## 预处理数据
+> python preconditioning.py
+> 
+## 生成数据
+https://github.com/napoler/BulidDataset/blob/main/buildDataSequenceClassification.py
+
+
+
