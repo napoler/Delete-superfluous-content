@@ -6,6 +6,8 @@ import re
 import json
 import random
 import csv
+import sys
+
 
 def text2data(text):
     """
@@ -37,7 +39,20 @@ def text2data(text):
 outFile=open("data/data.csv",'w')
 witer=csv.DictWriter(outFile,fieldnames=["sent","label","topic"])
 witer.writeheader()
-with open("data/web_text_zh_testa.json",'r') as f:
+
+
+if len(sys.argv) > 1:
+    dataFile = sys.argv[1]
+    # "data/web_text_zh_testa.json"
+else:
+    dataFile = input("数据集地址：")
+
+
+
+
+
+
+with open(dataFile,'r') as f:
     for i,it in enumerate(f):
         # print(it)
         data=json.loads(it)
