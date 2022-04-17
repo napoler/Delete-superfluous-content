@@ -1,4 +1,4 @@
-from typing import Any
+from typing import Any, Optional
 
 import pytorch_lightning as pl
 import torch
@@ -8,7 +8,7 @@ import torch
 # https://pytorch-lightning.readthedocs.io/en/1.2.1/common/early_stopping.html
 import torch.optim as optim
 from transformers import AutoConfig, AutoModel, BertTokenizer, AutoModelForSequenceClassification
-from torchmetrics.functional import accuracy, f1, precision_recall
+from torchmetrics.functional import accuracy, precision_recall
 from torchmetrics import AUROC
 import torch.nn as nn
 
